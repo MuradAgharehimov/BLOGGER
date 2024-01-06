@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.blogger {
+  width: 80%;
+  position: relative;
+}
+
+.single {
+  position: absolute;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nav-item.active .single {
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease;
+}
+
+.nav-item.active:hover .single {
+  height: 200px;
+  opacity: 1;
+}
+
+.single p {
+  margin: 0;
+  font-weight: 700;
+  transition: color 0.4s ease;
+}
+
+.single p:hover {
+  color: #69B4FD;
+}
+
+.bizpro {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+}
+.bizpro .navbar1 {
+  width: 88%;
+  height: 80px;
+}
+.bizpro .navbar1 #activeBlog {
+  width: 60px;
+  height: 40px;
+  position: relative;
+}
+.bizpro .navbar1 .blogdetails {
+  display: none;
+  width: 150px;
+  height: 40px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.3s;
+  position: absolute;
+  font-weight: 700;
+}
+.bizpro #blogHover:hover + .blogdetails {
+  transform: translateY(0);
+  opacity: 1;
+}
+.bizpro .blogdetails:hover {
+  cursor: pointer;
+  transform: translateY(0);
+  opacity: 1;
+  color: brown;
+}
+
+.cnt_hdr {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#discount {
+  width: 100%;
+  height: auto;
+  min-height: 1250px;
+  background-image: url(/assets/img/header-bg\ \(1\).jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#discount .text_discount {
+  width: 50%;
+}
+#discount .text_discount h1 {
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  line-height: 1.2em !important;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: white;
+}
+
+@media (max-width: 980px) {
+  #discount .text_discount {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+#lastest {
+  width: 100%;
+  height: auto;
+  min-height: 600px;
+}
+#lastest .lastest_cnt {
+  height: auto;
+  min-height: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#lastest .lastest_cnt .lastest_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+#lastest .lastest_cnt .lastest_text p {
+  width: 77%;
+  color: #777;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.625em;
+}
+#lastest .lastest_cnt .lastest_text h1 {
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  line-height: 1.2em !important;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-weight: 600;
+}
+#lastest .lastest_cnt .lastest_res {
+  width: 100%;
+}
+#lastest .lastest_cnt .lastest_res .lastest_col {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#lastest .lastest_cnt .lastest_res .lastest_col img {
+  max-width: 100%;
+  height: auto;
+}
+#lastest .lastest_cnt .lastest_res .lastest_col span {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #777;
+}
+#lastest .lastest_cnt .lastest_res .lastest_col h4 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+section .travel {
+  text-align: center;
+}
+section .travel h1 {
+  font-size: 28px;
+}
+section .travel p {
+  margin: 20px 0;
+}
+@media screen and (max-width: 991px) {
+  section .col-xl-3 {
+    margin-bottom: 30px;
+  }
+}
+section .col-xl-3 .addiction {
+  margin-top: 20px;
+}
+section .col-xl-3 .addiction h6 {
+  font-size: 18px;
+}
+section .col-xl-3 .addiction p {
+  margin-bottom: 20px;
+}
+section .col-xl-3 .like {
+  display: flex;
+  justify-content: space-between;
+}
+section .col-xl-3 .like .comments {
+  display: flex;
+}
+section .col-xl-3 .like .comments .icons {
+  margin-right: 5px;
+}
+section .col-xl-3 .like .comments p {
+  margin: 0;
+}
+section .loadmore {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .loadmore button {
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+}
+section .loadmore button:hover {
+  background-color: white;
+  color: black;
+}
+
+section .fashion {
+  text-align: center;
+  margin-bottom: 30px;
+}
+section .fashion h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+section .fashion p {
+  margin-bottom: 30px;
+}
+section .addictionfour {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+section .addictionfour .addicphoto img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+section .addictionfour .jan2btn button {
+  border: 0;
+  padding: 8px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  width: 170px;
+}
+section .addictionfour .gamb h6 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+section .addictionfour .lorem {
+  font-size: 14px;
+}
+section .addictionfour .like {
+  display: flex;
+  justify-content: space-between;
+}
+section .addictionfour .like .comments {
+  display: flex;
+}
+section .addictionfour .like .comments .icons {
+  margin-right: 5px;
+}
+section .addictionfour .like .comments p {
+  margin: 0;
+}
+@media screen and (max-width: 767px) {
+  section .addictionfour .jan2btn button {
+    width: 100%;
+  }
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  min-height: 150px;
+  background-color: #222222;
+}
+footer .spanx {
+  width: 100%;
+  height: auto;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+}
